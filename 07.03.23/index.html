@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            border:1 px solid black;
+        }
+        div.scroll{
+            overflow:scroll;
+        }
+        div.hidden{
+            overflow:hidden;
+        }
+
+
+        .container{
+            position: relative;
+        }
+        .box{
+            width:150px;
+            height:150px;
+            position: absolute;
+            opacity:0.9;
+        }
+        .red{
+            background: red;
+            z-index: 3;
+        }
+        .green{
+            top:30px;
+            left:30px;
+            background: green;
+            z-index: 2;
+        }
+        .blue{
+            top:60px;
+            left:60px;
+            background:yellow;
+            z-index: 3;
+        }
+        .clear{
+            clear:both;
+        }
+        p{
+            float:left;
+            margin:20px;
+            padding: 10px;
+            /* background-color: aqua; */
+        }
+
+    </style>
+</head>
+<body>
+    <h2>overflow:scroll</h2>
+    <div class="scroll">
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+    </div>
+    <div class="hidden">
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+        css property css property css property css property
+    </div>
+
+    <div>
+        <div>
+            
+            <div>
+                <h2>Position property</h2>
+                <p>Position <strong>propertyPosition propertyPosition </strong> propertyPosition propertyPosition propertyPosition propertyPosition property</p>
+            </div>
+            
+        </div>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, blanditiis facere cumque vero dignissimos animi voluptatem tempore minima pariatur unde nobis, modi aspernatur incidunt praesentium maxime saepe, quod exercitationem eos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis magnam natus aut delectus, nesciunt voluptas molestias totam officia dolores assumenda expedita tempora excepturi dolorum et reiciendis quam cum porro <consequatur class="lorem"></consequatur>
+        </p> -->
+    </div>
+
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+
+    <p>zfy tadsr y</p>
+    <p class="clear">s SRYdtu tauatffffffffff</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

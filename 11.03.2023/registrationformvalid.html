@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        form{
+            margin-left: 350px;
+        }
+        body{
+            background-color:bisque;
+        }
+        form{
+            background-color:azure;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Form Validation</h2></center>
+    <form action="" name="regform" onsubmit="return validate()" class="col-md-6">
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" name="fname">
+            <span id="fnameErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" class="form-control" name="lname">
+            <span id="lnameErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="textarea" class="form-control" name="address">
+            <span id="addressErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="radio"  name="gender" value="Male">Male
+            <input type="radio"  name="gender" value="Female">Female
+            <span id="genderErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email">
+            <span id="emailErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="number" class="form-control" name="mobile">
+            <span id="mobileErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="course">Select Course</label>
+            <select name="course" id="course" class="form-control">
+                <option value="Select Course">Select Course</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Deep Learning">Deep Learning</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+            </select>
+            <span id="courseErr" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            
+            <button type="submit" class="btn btn-success">Register</button>
+            <button type="reset" class="btn btn-default">Cancel</button>
+        </div>
+    </form>
+
+    <script>
+        function validate()
+        {
+            // event.preventDefault();
+            var fname=document.regform.fname;
+            var lname=document.regform.lname;
+            var address=document.regform.address;
+            var gender=document.regform.gender;
+            var email=document.regform.email;
+            var mobile=document.regform.mobile;
+            var course=document.regform.course;
+
+            if(fname.value.length<=0)
+            {
+                document.getElementById('fnameErr').innerHTML="First name required";
+                fname.focus();
+                return false;
+            }
+            if(lname.value.length<=0)
+            {
+                document.getElementById('lnameErr').innerHTML="Last name required";
+                lname.focus();
+                return false;
+            }
+            if(address.value.length<=0)
+            {
+                document.getElementById('addressErr').innerHTML="Address required";
+                address.focus();
+                return false;
+            }
+            if(gender.value.length<=0)
+            {
+                document.getElementById('genderErr').innerHTML="Choose the gender";
+                // gender.focus();
+                return false;
+            }
+            if(email.value.length<=0)
+            {
+                document.getElementById('emailErr').innerHTML="Email id required";
+                email.focus();
+                return false;
+            }
+            if(mobile.value.length<=0)
+            {
+                document.getElementById('mobileErr').innerHTML="Mobile number required";
+                mobile.focus();
+                return false;
+            }
+            if(course.value=="Select Course")
+            {
+                document.getElementById('courseErr').innerHTML="Select the course";
+                course.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>

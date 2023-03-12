@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <h2>Validate file type</h2>
+    <p>upload your file</p>
+    <input type="file" id="file" onchange="return filevalidate()">
+    <div id="filepreview"></div>
+    <script>
+        function filevalidate()
+        {
+            var fileInput=document.getElementById('file');
+            var filepath=fileInput.value;
+            const regexForPdf= /\w+\.pdf/g;
+            const result=filepath.match(regexForPdf);
+            console.log('result = ' +result);
+            if(result==null)
+            {
+                alert('Choose only the pdf file');
+            }
+            else{
+                alert('file uploaded')
+            }
+        }
+    </script>
+</body>
+</html>

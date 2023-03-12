@@ -1,0 +1,42 @@
+/* .navbar a{
+    display: inline;
+    color: white;
+    padding: 10px 30px;
+    float: right;
+}
+
+/* it's working fine
+
+.navbar{
+    background-color: black;
+    height: 40px;
+} */
+
+body{
+  margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E91E63;
+  }
+  
+  nav li {
+    display: inline-block
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  
+  nav li a:hover {
+    background-color: #111;
+  }

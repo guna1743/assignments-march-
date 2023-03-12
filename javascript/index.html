@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //string
+
+        var fname="guna";
+        console.log('my name is '+fname);
+        document.write('my name is '+fname);
+        var lname="m";
+        console.log(`${fname} ${lname}`);
+        document.write('<br/>my name is '+fname)
+        document.write('<br/>my name is '+fname+'<br/>')
+        
+        //Number
+
+        var num1=234;var num2=990;var add=num1+num2;
+        console.log(`${num1} +  ${num2} = ${add}`);
+        document.write(`${num1} +  ${num2} = ${add}`)
+        //infinity
+        console.log(`45/0= ${45/0}`);
+        document.write(`45/0= ${45/0}`);
+        //Not An Number
+        console.log(`${fname}/${num1}=${fname/num1}`);
+        document.write(`${fname}/${num1}=${fname/num1}`);
+
+        //boolean type
+        var isLoggedin=true;
+        console.log(`isLoggedin = ${isLoggedin}`);
+        document.write(`isLoggedin = ${isLoggedin}`);
+        console.log(`isLoggedin = ${!isLoggedin}`);
+        document.write(`isLoggedin = ${!isLoggedin}`);
+
+        //undefined
+
+        var name;
+        console.log(`${name}`);
+        document.write(`${name}`+`<br/>`)
+
+        //null
+
+        var name1=null;
+        console.log(`${name1}`);
+        document.write(`${name1}`)
+
+        //object
+
+        var car={
+            brand:'bmw',
+            color:'blue'
+        }
+        console.log(`${car.brand}  ${car.color}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

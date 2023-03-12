@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.navbar{
+    background-color: black;
+    width: 100%;
+    top: 0;
+    height: 58px;
+    position: fixed;
+}
+
+.navbar a{
+    /* display: inline; */
+    color: white;
+    padding: 20px;
+    float: right;
+}
+
+
+.navbar a:hover:not(.logo)
+{
+    background-color: bisque;
+}

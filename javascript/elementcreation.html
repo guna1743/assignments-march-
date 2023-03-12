@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        let users=[
+            {fname:"karthik",lname:"nagaraj"},
+            {fname:"denil",lname:"doss"},
+            {fname:"guna",lname:"murugan"},
+            {fname:"kaviya",lname:"sundaram"},
+        ];
+        document.getElementById("userlist").innerHTML="list of users";
+    </script> -->
+</head>
+<body>
+    <div id="userlist">
+     
+    </div>
+ 
+   <p id="demo"></p>
+
+    <script>
+        const userlist=document.getElementById("userlist");
+        document.getElementById("userlist").innerHTML="list of users";
+        let userdiv=document.createElement('div');
+        userdiv.innerHTML="i am user1";
+        userlist.appendChild(userdiv);
+//array of objects
+
+        let users=[
+            {Id:1,fname:"karthik",lname:"nagaraj"},
+            {Id:2,fname:"denil",lname:"doss"},
+            {Id:3,fname:"guna",lname:"murugan"},
+            {Id:4,fname:"kaviya",lname:"sundaram"},
+        ];
+        var user=users.filter((u)=>u.fname==="karthik");
+        document.write(`<br><br> ${user.length}`);
+        console.log(user)
+        document.write(`<br> ${user}`);
+        for(var i=0;i<user.length;i++)
+        {
+            document.write(`<br> ${user[i].lname},${user[i].fname}`)
+        }
+
+
+        // map
+
+        var userfirstnames=users.map((user)=>{
+            const firstnames={};
+            firstnames[user.Id]=user.fname
+            console.log(firstnames);
+            return firstnames;
+        });
+        console.log(userfirstnames);
+
+//map
+
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction);
+
+document.getElementById("demo").innerHTML = newArr;
+
+function myFunction(num) {
+  return num * 10;
+}
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let EmployeeList=[
+            {Name:"Guna",Id:1,Gender:"Male",Salary:400000,Designation:"Software Engineer"},
+            {Name:"Ashok",Id:2,Gender:"Male",Salary:450000,Designation:"Associate Engineer"},
+            {Name:"Ramya",Id:3,Gender:"Female",Salary:500000,Designation:"Software Engineer"},
+            {Name:"Swathi",Id:4,Gender:"Female",Salary:600000,Designation:"Associate Engineer"},
+
+        ];
+
+        var user1=EmployeeList.filter((a)=> a.Gender==="Male");
+        document.write('List of Male Employees:<br>');
+        for(var i=0;i<user1.length;i++)
+        {
+            document.write(`<br> Name: ${user1[i].Name} , Id: ${user1[i].Id} , Gender: ${user1[i].Gender} , Salary: ${user1[i].Salary} , Designation: ${user1[i].Designation}`);
+        }
+        document.write('<br>');
+        document.write(`<br>List of Female Employees:<br>`);
+        var user1=EmployeeList.filter((a)=> a.Gender==="Female");
+        for(var i=0;i<user1.length;i++)
+        {
+            document.write(`<br> Name: ${user1[i].Name} , Id: ${user1[i].Id} , Gender: ${user1[i].Gender} , Salary: ${user1[i].Salary} , Designation: ${user1[i].Designation}`);
+        }
+        document.write('<br>');
+        document.write(`<br>List of Associate Engineer Employees:<br>`);
+        var user1=EmployeeList.filter((a)=> a.Designation==="Associate Engineer");
+        for(var i=0;i<user1.length;i++)
+        {
+            document.write(`<br> Name: ${user1[i].Name} , Id: ${user1[i].Id} , Gender: ${user1[i].Gender} , Salary: ${user1[i].Salary} , Designation: ${user1[i].Designation}`);
+        }
+
+    </script>
+</body>
+</html>

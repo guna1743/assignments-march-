@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var names = ["guna", "hari", "ashok", "velu"];
+        document.write(names);
+        document.write(`<br/> ${names[3]}`);
+        console.log(`<br/> ${names[3]}`);
+        for (var i = 0; i < names.length; i++) {
+            document.write(`<li>${names[i]}</li>`);
+        }
+        names[5] = "nithis selvam";
+        document.write(`<br/> <br> After adding nithis in names[5] <br>`);
+
+        for (var i = 0; i < names.length; i++) {
+            document.write(`<li>${names[i]}</li>`);
+        }
+
+        names.push("denil doss");
+        document.write(`<br> <br> After adding denil doss using push method in names array <br>`);
+        for (var i = 0; i < names.length; i++) {
+            document.write(`<li>${names[i]}</li>`);
+        }
+        document.write(`names.includes("kowsalya") ${names.includes("kowsalya")} <br>`);
+        document.write(`names.includes("denil doss") ${names.includes("denil doss")}`);
+        document.write("<br><br> slice method");
+        //slice
+        const fewnames = names.slice(1, 3);
+        for (var i = 0; i < fewnames.length; i++) {
+            document.write(`<br> ${fewnames[i]}`);
+        }
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

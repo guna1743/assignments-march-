@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        th{
+            background-color: antiquewhite;
+        }
+        tr:nth-child(2n)
+        {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Employee Details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody id="empdetails">
+
+        </tbody>
+    </table>
+
+    <script>
+        
+        let EmployeeList=[
+            {Name:"Guna",Id:1,Gender:"Male",Salary:400000,Designation:"Software Engineer"},
+            {Name:"Ashok",Id:2,Gender:"Male",Salary:450000,Designation:"Associate Engineer"},
+            {Name:"Ramya",Id:3,Gender:"Female",Salary:500000,Designation:"Software Engineer"},
+            {Name:"Swathi",Id:4,Gender:"Female",Salary:600000,Designation:"Associate Engineer"}
+        ];
+
+        // for(let i=0;i<EmployeeList.length;i++)
+        // {
+        //     document.write(`Name: ${EmployeeList[i].Name} Id: ${EmployeeList[i].Id} Gender: ${EmployeeList[i].Gender} Salary: ${EmployeeList[i].Salary} Designation: ${EmployeeList[i].Designation} <br> `)
+        // }
+        let tbody = '<tbody>';
+        for (let i = 0; i < EmployeeList.length; i++) {
+            tbody += '<tr>';
+            tbody += '<td>' + EmployeeList[i].Name + '</td>';
+            tbody += '<td>' + EmployeeList[i].Id + '</td>';
+            tbody += '<td>' + EmployeeList[i].Gender + '</td>';
+            tbody += '<td>' + EmployeeList[i].Salary + '</td>';
+            tbody += '<td>' + EmployeeList[i].Designation + '</td>';
+            tbody += '</tr>';
+        }
+        // tbody += '</tbody>';
+        document.getElementById('empdetails').innerHTML = tbody;
+    </script>
+</body>
+</html>

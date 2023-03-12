@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment1</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            width: 100px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        th {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div><b>Employee Table</b></div> <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody id="bodydemo"></tbody>
+    </table>
+    <script>      let employee = [
+            {
+                Name: "Dharanya",
+                id: "1",
+                gender: "female",
+                salary: "150000",
+                designation: "Associate Developer",
+            },
+            {
+                Name: "Kowsalya",
+                id: "2",
+                gender: "female",
+                salary: "160000",
+                designation: "SE",
+            },
+            {
+                Name: "Shalini",
+                id: "3",
+                gender: "female",
+                salary: "170000",
+                designation: "SE",
+            },
+            {
+                Name: "oviya",
+                id: "4",
+                gender: "female",
+                salary: "180000",
+                designation: "Associate Developer",
+            },
+            {
+                Name: "Keerthi",
+                id: "5",
+                gender: "female",
+                salary: "190000",
+                designation: "SE",
+            },
+            {
+                Name: "Mahesh",
+                id: "6",
+                gender: "male",
+                salary: "160000",
+                designation: "SE",
+            },
+            {
+                Name: "Niresh",
+                id: "7",
+                gender: "male",
+                salary: "170000",
+                designation: "SE",
+            },
+        ];
+        //Table
+        const rows = employee.map((item) => {
+            return `<tr><td>${item.Name}</td><td>${item.id}</td><td>${item.gender}</td><td>${item.salary}</td><td>${item.designation}</td></tr>`;
+        });
+        bodydemo.innerHTML = rows.join("");
+        // Male Employee filter
+        document.write(`<br/> <Strong>Male Employee</Strong> <br/>`);
+        const empListMale = employee.filter((u) => u.gender === "male");
+        const lengthMale = empListMale.length;
+       
+        const result=empListMale.map((arr)=>{
+            return `<br>${arr.Name} , ${arr.id} , ${arr.gender} , ${arr.salary} , ${arr.designation}`;
+        })
+        document.write(result);
+        console.log(result);
+
+        // Female Employee filter
+        document.write(`<br/><br/> <Strong>Female Employee</Strong> <br/>`);
+        const empListFemale = employee.filter((u) => u.gender === "female");
+        const lengthFemale = empListFemale.length;
+        for (var i = 0; i < lengthFemale; i++) {
+            document.write(`<br/>${empListFemale[i].Name}`);
+        }
+        // Designation filter
+        document.write(`<br/><br/> <Strong>Associate Developer</Strong> <br/>`);
+        const empListAssociate = employee.filter(
+            (u) => u.designation === "Associate Developer"
+        );
+        const lengthAssociate = empListAssociate.length;
+        for (var i = 0; i < lengthAssociate; i++) {
+            document.write(`<br/>${empListAssociate[i].Name}`);
+        }
+    </script>
+</body>
+
+</html>
